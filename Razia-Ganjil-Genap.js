@@ -1,32 +1,8 @@
 function kenaRazia(date, data) {
-    let hasilRazia = [];
-  
-    for (let i = 0; i < data.length; i++) {
-      let kendaraan = data[i];
-      if (kendaraan.type === "Mobil") {
-        let platNomor = kendaraan.plat.split(' ')[1];
-        let nomorBelakang = parseInt(platNomor[platNomor.length - 1]);
-        let isGanjil = date % 2 !== 0;
-        let tilang = 0;
-  
-        for (let j = 0; j < kendaraan.rute.length; j++) {
-          let rute = kendaraan.rute[j];
-          if (
-            (isGanjil && nomorBelakang % 2 === 0 && (rute === "Gajah Mada" || rute === "Hayam Wuruk" || rute === "Sisingamangaraja" || rute === "Panglima Polim" || rute === "Fatmawati" || rute === "Tomang Raya")) ||
-            (!isGanjil && nomorBelakang % 2 !== 0 && (rute === "Gajah Mada" || rute === "Hayam Wuruk" || rute === "Sisingamangaraja" || rute === "Panglima Polim" || rute === "Fatmawati" || rute === "Tomang Raya"))
-          ) {
-            tilang++;
-          }
-        }
-  
-        if (tilang > 0) {
-          hasilRazia.push({ name: kendaraan.name, tilang: tilang });
-        }
-      }
-    }
-  
-    return hasilRazia;
-  }
+
+  //code goes here
+
+}
   
 
 console.log(
