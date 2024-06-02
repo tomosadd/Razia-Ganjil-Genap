@@ -88,3 +88,16 @@ console.log(
 );
 
 // [ { name: ‘Toni’, tilang: 1 }, { name: ‘Anna’, tilang: 3 } ]
+
+function kenaRazia(date, data) {
+    let hasilRazia = [];
+  
+    for (let i = 0; i < data.length; i++) {
+      let kendaraan = data[i];
+      if (kendaraan.type === "Mobil") {
+        let platNomor = kendaraan.plat.split(' ')[1];
+        let nomorBelakang = parseInt(platNomor[platNomor.length - 1]);
+        let isGanjil = date % 2 !== 0;
+        let tilang = 0;
+  
+        for (let j = 0; j <
